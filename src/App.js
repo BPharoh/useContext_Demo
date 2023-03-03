@@ -1,10 +1,18 @@
 import './App.css';
+import {CompA} from './CompA';
+import { GlobalContextProvider } from './GlobalContext';
 
+const info = "Info will be here"
 function App() {
+
+  
   return (
-    <div className="App">
-      Application will be here
+    <GlobalContextProvider>
+   <div className="App">
+      <CompA info={info} />
     </div>
+    </GlobalContextProvider>
+ 
   );
 }
 
